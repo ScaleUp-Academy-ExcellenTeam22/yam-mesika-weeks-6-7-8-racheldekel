@@ -86,3 +86,39 @@ class PostOffice:
                 return_message.append(message)
 
         return return_message
+
+
+class Message:
+    """
+    class message - print and help with the details
+    """
+
+
+def __init__(self, message_id, message_body, message_sender, message_status="not read"):
+    """
+    the init function that dave the information of the message that necessary
+    :param self: the self
+    :param message_id: the message id
+    :param message_body: body of the message - the text
+    :param message_sender: the message send
+    :param message_status: the message status
+    :return:
+    """
+    self.id = message_id
+    self.body = message_body
+    self.sender = message_sender
+    self.status = message_status
+
+
+def __str__(self):
+    """
+    function that prints the message.
+    """
+    print("Message from ", self.sender, ":")
+    print(self.body)
+
+
+def len(self):
+    """
+    funstion that returns the length of the message.
+    """
