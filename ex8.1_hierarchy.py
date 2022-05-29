@@ -1,8 +1,9 @@
 class RegularUser:
     """
-    managing the regular users
+    Saved the regular users
     """
-    def __init__(self, username, password, manager=False):
+
+    def __init__(self, username: str, password: str, manager=False):
         self.username = username
         self.password = password
         self.manager = manager
@@ -10,8 +11,9 @@ class RegularUser:
 
 class SystemAdministrator:
     """
-        managing the system administrator users
+        Saved the system administrator users
         """
+
     def __init__(self):
         self.root = []
 
@@ -21,9 +23,10 @@ class SystemAdministrator:
 
 class Directory:
     """
-     Class for directories.
+     Class's for all the directories.
      contains a file functions
     """
+
     def __init__(self, name):
         self.name = name
         self.files_list = []
@@ -42,9 +45,10 @@ class Directory:
 
 class File:
     """
-    class for all files params
+    Class for all files params
     """
-    def __init__(self, file_name, weight, content, composer):
+
+    def __init__(self, file_name: str, weight: float, content: str, composer):
         self.name = file_name
         self.weight = weight
         self.content = content
@@ -59,8 +63,9 @@ class File:
 
 class Text(File):
     """
-    class for text files
+    Class for text files
     """
+
     def __init__(self, weight, content, composer):
         super().__init__(weight, content, composer)
 
@@ -70,16 +75,18 @@ class Text(File):
 
 class Binary(File):
     """
-    class for binary files
+    Class for binary files
     """
+
     def __init__(self, weight, content, composer):
         super().__init__(weight, content, composer)
 
 
 class Image(Binary):
     """
-    class for image files
+    Class for image files
     """
+
     def __init__(self, weight, content, composer):
         super().__init__(weight, content, composer)
 
