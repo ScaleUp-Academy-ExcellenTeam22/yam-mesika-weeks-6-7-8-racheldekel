@@ -6,6 +6,7 @@ class PostOffice:
         message_id (int): Incremental id of the last message sent.
         boxes (dict): Users' inboxes.
     """
+
     def __init__(self, usernames):
         self.message_id = 0
         self.boxes = {user: [] for user in usernames}
@@ -48,8 +49,8 @@ class PostOffice:
 
     def read_inbox(self, username, N=10):
         """
-        An function that gets the name of the user and number of the message request.
-        the function returns the first N messages in the mailbox.
+        A function that gets the name of the user and number of the message request.
+        The function returns the first N messages in the mailbox.
         :param username: name of the user
         :param N: number of the message request
         :return: the first N messages in the mailbox. (if not exist return all messages in the mailbox)
@@ -74,8 +75,8 @@ class PostOffice:
 
     def search_inbox(self, username, sentence):
         """
-        An function that gets the name of the user and string .
-        the function return list of all the messages that contains the string in there headline or font.
+        A function that gets the name of the user and string .
+        The function return list of all the messages that contains the string in there headline or font.
         :param username:  the name of the user
         :param sentence:  string
         :return: list of all the messages that contains the string in there headline or font.
@@ -90,18 +91,18 @@ class PostOffice:
 
 class Message:
     """
-    class message - print and help with the details
+    class message - print and help with the details.
     """
 
 
 def __init__(self, message_id, message_body, message_sender, message_status="not read"):
     """
-    the init function that dave the information of the message that necessary
-    :param self: the self
-    :param message_id: the message id
-    :param message_body: body of the message - the text
-    :param message_sender: the message send
-    :param message_status: the message status
+    The init function that dave the information of the message that necessary.
+    :param self:
+    :param message_id:
+    :param message_body:
+    :param message_sender:
+    :param message_status:
     :return:
     """
     self.id = message_id
@@ -112,13 +113,12 @@ def __init__(self, message_id, message_body, message_sender, message_status="not
 
 def __str__(self):
     """
-    function that prints the message.
+    Function that prints the message.
     """
-    print("Message from ", self.sender, ":")
-    print(self.body)
+    return self.sender, self.body
 
 
 def len(self):
     """
-    funstion that returns the length of the message.
+    Funstion that returns the length of the message.
     """
